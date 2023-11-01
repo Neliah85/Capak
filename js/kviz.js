@@ -1,5 +1,5 @@
-function checkAnswer() {
-    const correctAnswer = {
+function checkAnswers() {
+    const correctAnswers = {
         question1:"2",
         question2:"2",
         question3:"2",
@@ -25,8 +25,8 @@ function checkAnswer() {
         question10: document.querySelector('input[name="question10"]:checked').value
     };
 
-    if (
-        userAnswers.question1 === correctAnswers.question1 &&
+    if 
+    (   userAnswers.question1 === correctAnswers.question1 &&
         userAnswers.question2 === correctAnswers.question2 &&
         userAnswers.question3 === correctAnswers.question3 &&
         userAnswers.question4 === correctAnswers.question4 &&
@@ -35,11 +35,10 @@ function checkAnswer() {
         userAnswers.question7 === correctAnswers.question7 &&
         userAnswers.question8 === correctAnswers.question8 &&
         userAnswers.question9 === correctAnswers.question9 &&
-        userAnswers.question10 === correctAnswers.question10
-    ) {
+        userAnswers.question10 === correctAnswers.question10)
+    {
         document.getElementById("result").textContent = "Gratulálok, minden válasz helyes!";
     } else {
         document.getElementById("result").textContent = "Nem minden válasz helyes, próbáld újra.";
     }
 }
-              

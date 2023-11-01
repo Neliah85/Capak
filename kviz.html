@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mindent a cápákról</title>
+        <script src="js/kviz.js"></script>
+    </head>
+    <body>
+        <h1>Kvíz</h1>
+
+        <h3>Milyen osztályba tartoznak a cápák?</h3>
+        <p>Válassza ki a helyes választ:</p>
+        <p id="result"></p>
+        <form id="quizForm">
+            <input type="radio" name="answer" value="1"> Csontos halak<br>
+            <input type="radio" name="answer" value="2"> Porcos halak<br>
+            <input type="radio" name="answer" value="3"> Emlősök<br>
+            <input type="radio" name="answer" value="4"> Hüllők<br>
+            <br>
+            <input type="button" value="Ellenőrzés" onclick="checkAnswer()">
+        </form>
+    </body>
+</html>

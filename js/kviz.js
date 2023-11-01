@@ -10,7 +10,8 @@ function checkAnswer() {
         question8:"3",
         question9:"3",
         question10:"1"
-    }
+    };
+
     const userAnswers = {
         question1: document.querySelector('input[name="question1"]:checked').value,
         question2: document.querySelector('input[name="question2"]:checked').value,
@@ -21,7 +22,7 @@ function checkAnswer() {
         question7: document.querySelector('input[name="question7"]:checked').value,
         question8: document.querySelector('input[name="question8"]:checked').value,
         question9: document.querySelector('input[name="question9"]:checked').value,
-        question10: document.querySelector('input[name="question10"]:checked').value,
+        question10: document.querySelector('input[name="question10"]:checked').value
     };
 
     if (
@@ -31,10 +32,10 @@ function checkAnswer() {
         userAnswers.question4 === correctAnswers.question4 &&
         userAnswers.question5 === correctAnswers.question5 &&
         userAnswers.question6 === correctAnswers.question6 &&
-        userAnswers.question7 === correctAnswers.question6 &&
-        userAnswers.question8 === correctAnswers.question6 &&
-        userAnswers.question9 === correctAnswers.question6 &&
-        userAnswers.question10 === correctAnswers.question6 &&
+        userAnswers.question7 === correctAnswers.question7 &&
+        userAnswers.question8 === correctAnswers.question8 &&
+        userAnswers.question9 === correctAnswers.question9 &&
+        userAnswers.question10 === correctAnswers.question10
     ) {
         document.getElementById("result").textContent = "Gratulálok, minden válasz helyes!";
     } else {

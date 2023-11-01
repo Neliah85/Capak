@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kvíz</title>
+    <script src="teszt.js"></script>
+</head>
+<body>
+
+    <h1>Kvíz - Cápák</h1>
+    
+    <p id="result"></p>
+    
+    <form id="quizForm">
+        <h2>Kérdés 1:</h2>
+        <p>Milyen osztályba tartoznak a cápák?</p>
+        <input type="radio" name="question1" value="1"> 1. csontos halak<br>
+        <input type="radio" name="question1" value="2"> 2. porcos halak<br>
+        <input type="radio" name="question1" value="3"> 3. emlősök<br>
+        <input type="radio" name="question1" value="4"> 4. hüllők<br>
+
+        <h2>Kérdés 2:</h2>
+        <p>Hány cápafajt ismer jelenleg a tudomány?</p>
+        <input type="radio" name="question2" value="1"> 1. nagyjából 200<br>
+        <input type="radio" name="question2" value="2"> 2. nagyjából 470<br>
+        <input type="radio" name="question2" value="3"> 3. nagyjából 1100<br>
+
+        <h2>Kérdés 3:</h2>
+        <p>Az ismert cápafajok közül melyik három számít a leginkább veszélyesnek?</p>
+        <input type="radio" name="question3" value="1"> 1. Nagy fehér-, tigris- és bikacápa<br>
+        <input type="radio" name="question3" value="2"> 2. Tigris-, nagy fehér- és kékcápa<br>
+        <input type="radio" name="question3" value="3"> 3. Nagy fehér- makó- és homoki tigriscápa<br>
+
+        <br>
+        <input type="button" value="Ellenőrzés" onclick="checkAnswers()">
+    </form>
+
+    <p id="result"></p>
+
+   </body>
+</html>

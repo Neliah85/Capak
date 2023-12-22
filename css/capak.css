@@ -1,11 +1,4 @@
-.fejlec{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-
-  }
-
-  .capa{
+.capa{
    font-family: 'Times New Roman', Times, serif;
    background-color: black;
 
@@ -115,8 +108,18 @@ margin-right: 20px;
 }
 
 .gomb{
-   margin: 0 auto 0 auto;
-   width: 100px;
+  
+   background-color: #4c9daf; 
+   border: none; 
+   color: white; 
+   padding: 10px 20px; 
+   text-align: center; 
+   text-decoration: none; 
+   display: inline-block; 
+   font-size: 16px; 
+   margin: 4px 2px; 
+   cursor: pointer;
+   border-radius: 5px;
    }
 
    .bovebben{

@@ -84,7 +84,7 @@ background-color: rgb(66, 65, 65);
 margin-left: 200px;
 margin-right: 200px;
 border-radius: 10px;
-background-image: url(/img/capa2.jpg);
+background-image: url(../img/capa2.jpg);
 background-size: 100% 100%;
 
 }

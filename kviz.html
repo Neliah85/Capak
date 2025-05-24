@@ -1,88 +1,105 @@
 <!DOCTYPE html>
 <html lang="hu">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Cápás kvíz</title>
-        <script src="js/kviz.js"></script>
-        <link rel="stylesheet" href="css/capak.css">
-    </head>
-    <body class="kviz3">
-        <div class="kviz">
-            <h1 class="center kviz1">Kvíz</h1>
-            <p class="kviz2">
-                Az alábbi kvíz a tenger híres ragadozóiról, a cápákról szó. Vannak kicsik és nagyok, némelyik hihetetlen mélységben él, másoknak pedig igen rossz a híre. Párnak egészen különleges képességei vannak, és még az olyan rég kihalt cápákról is horrort készítettek mint a megalodon. Eközben a cápákért rajongó búvárok nagy pénzeket fizetnek a cápás merülésekért. Rendszeresen felbukkannak cápák bulvárcikkekben, regényekben, illetve filmekben- jellemzően veszélyforrásként. Most megmutathatod, te mennyire vagy járatos a cápák világában, és mennyire tudod, mi az, ami mese és mi a valóság!
-            </p>
-            <br><br>
-            <h1 class="center kviz1">Kvíz - Cápák</h1>
-            <p id="result"></p>
-            <form id="quizForm">
-                <p class="kviz1">Milyen osztályba tartoznak a cápák?</p>
-                <input type="radio" name="question1" value="1"> Csontos halak<br>
-                <input type="radio" name="question1" value="2"> Porcos halak<br>
-                <input type="radio" name="question1" value="3"> Emlősök<br>
-                <input type="radio" name="question1" value="4"> Hüllők<br>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cápás kvíz</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/capak.css">
+  <script src="js/kviz.js" defer></script>
+</head>
+<body class="kviz3">
+  <div class="container my-5 py-4 kviz shadow">
+    <h1 class="text-center text-light mb-4">Kvíz - Cápák</h1>
+    <p class="kviz2">
+      Az alábbi kvíz a tenger híres ragadozóiról, a cápákról szól. Vannak kicsik és nagyok, némelyik hihetetlen mélységben él, másoknak pedig igen rossz a híre. Párnak egészen különleges képességei vannak, és még az olyan rég kihalt cápákról is horrort készítettek mint a megalodon. Eközben a cápákért rajongó búvárok nagy pénzeket fizetnek a cápás merülésekért. Rendszeresen felbukkannak cápák bulvárcikkekben, regényekben, illetve filmekben - jellemzően veszélyforrásként. Most megmutathatod, mennyire vagy járatos a cápák világában, és tudod-e, mi mese, és mi a valóság!
+    </p>
+    <form id="quizForm">
+      <div class="form-group">
+        <label class="kviz1">1. Milyen osztályba tartoznak a cápák?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question1" value="1"> Csontos halak</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question1" value="2"> Porcos halak</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question1" value="3"> Emlősök</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question1" value="4"> Hüllők</div>
+      </div>
 
-                <p class="kviz1">Milyen cápafaj egyede szerepel Steven Spielberg híres filmjében, a Cápában?</p>
-                <input type="radio" name="question2" value="1">Tigris cápa<br>
-                <input type="radio" name="question2" value="2"> Nagy fehér cápa<br>
-                <input type="radio" name="question2" value="3"> Kékcápa<br>
+      <div class="form-group">
+        <label class="kviz1">2. Milyen cápafaj egyede szerepel Steven Spielberg híres filmjében, a Cápában?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question2" value="1"> Tigris cápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question2" value="2"> Nagy fehér cápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question2" value="3"> Kékcápa</div>
+      </div>
 
-                <p class="kviz1">Mekkora hosszúságú volt a valaha kifogott legnagyobb cetcápa?</p>
-                <input type="radio" name="question3" value="1"> 15,1 méter<br>
-                <input type="radio" name="question3" value="2"> 18,8 méter<br>
-                <input type="radio" name="question3" value="3"> 25,2 méter<br>
-                <input type="radio" name="question3" value="4"> 30 méter<br>
+      <div class="form-group">
+        <label class="kviz1">3. Mekkora hosszúságú volt a valaha kifogott legnagyobb cetcápa?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question3" value="1"> 15,1 méter</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question3" value="2"> 18,8 méter</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question3" value="3"> 25,2 méter</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question3" value="4"> 30 méter</div>
+      </div>
 
-                <p class="kviz1">Melyik állat közelebbi rokona a cápának?</p>
-                <input type="radio" name="question4" value="1"> Tüskés rája<br>
-                <input type="radio" name="question4" value="2"> Barrakuda<br>
-                <input type="radio" name="question4" value="3"> Kardszárnyú delfin<br>
-                <input type="radio" name="question4" value="4"> Delfin<br>
+      <div class="form-group">
+        <label class="kviz1">4. Melyik állat közelebbi rokona a cápának?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question4" value="1"> Tüskés rája</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question4" value="2"> Barrakuda</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question4" value="3"> Kardszárnyú delfin</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question4" value="4"> Delfin</div>
+      </div>
 
-                <p class="kviz1">Melyik cápával találkozhatnak legnagyobb eséllyel a búvárok az Adriai-tengerben?</p>
-                <input type="radio" name="question5" value="1"> Leopárdcápa<br>
-                <input type="radio" name="question5" value="2"> Tigriscápa<br>
-                <input type="radio" name="question5" value="3"> Macskacápa<br>
-                <input type="radio" name="question5" value="4"> Kékcápa<br>
+      <div class="form-group">
+        <label class="kviz1">5. Melyik cápával találkozhatnak legnagyobb eséllyel a búvárok az Adriai-tengerben?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question5" value="1"> Leopárdcápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question5" value="2"> Tigriscápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question5" value="3"> Macskacápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question5" value="4"> Kékcápa</div>
+      </div>
 
-                <p class="kviz1">A nagy fehér cápák általában 4-5 méteres hosszúságúra nőhetnek meg. A hímek vagy a nőstények a nagyobbak?</p>
-                <input type="radio" name="question6" value="1"> Hímek<br>
-                <input type="radio" name="question6" value="2"> Nőstények<br>
+      <div class="form-group">
+        <label class="kviz1">6. A nagy fehér cápák általában 4-5 méteres hosszúságúra nőhetnek meg. A hímek vagy a nőstények a nagyobbak?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question6" value="1"> Hímek</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question6" value="2"> Nőstények</div>
+      </div>
 
-                <p class="kviz1">Mivel táplálkozik a legnagyobb testű cápafaj, a cetcápa?</p>
-                <input type="radio" name="question7" value="1"> Ragadozó, így fókákkal, halakkal<br>
-                <input type="radio" name="question7" value="2"> Növényekkel<br>
-                <input type="radio" name="question7" value="3"> Főleg állati planktonokkal<br>
+      <div class="form-group">
+        <label class="kviz1">7. Mivel táplálkozik a legnagyobb testű cápafaj, a cetcápa?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question7" value="1"> Ragadozó, így fókákkal, halakkal</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question7" value="2"> Növényekkel</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question7" value="3"> Főleg állati planktonokkal</div>
+      </div>
 
-                <p class="kviz1">Az egész világot tekintve évente átlagosan négy halálos kimenetelű cápatámadás történik. Hol van ezekből a legtöbb?</p>
-                <input type="radio" name="question8" value="1">Florida<br>
-                <input type="radio" name="question8" value="2"> Dél-Afrika<br>
-                <input type="radio" name="question8" value="3"> Ausztrália<br>
+      <div class="form-group">
+        <label class="kviz1">8. Hol történik évente a legtöbb halálos cápatámadás?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question8" value="1"> Florida</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question8" value="2"> Dél-Afrika</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question8" value="3"> Ausztrália</div>
+      </div>
 
-                <p class="kviz1">Milyen maximális sebességet képes elérni egy röviduszonyú makócápa?</p>
-                <input type="radio" name="question9" value="1"> 30-35 km/h<br>
-                <input type="radio" name="question9" value="2">50-60 km/h<br>
-                <input type="radio" name="question9" value="3"> Több mint 65 km/h<br>
+      <div class="form-group">
+        <label class="kviz1">9. Milyen maximális sebességet képes elérni egy röviduszonyú makócápa?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question9" value="1"> 30-35 km/h</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question9" value="2"> 50-60 km/h</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question9" value="3"> Több mint 65 km/h</div>
+      </div>
 
-                <p class="kviz1">Az ismert cápafajok közül melyik három számít a leginkább veszélyesnek?</p>
-                <input type="radio" name="question10" value="1"> Nagy fehér-, tigris- és bikacápa<br>
-                <input type="radio" name="question10" value="2"> Tigris-, nagy fehér- és kékcápa<br>
-                <input type="radio" name="question10" value="3"> Nagy fehér- makó- és homoki tigriscápa<br>
+      <div class="form-group">
+        <label class="kviz1">10. Az ismert cápafajok közül melyik három számít a leginkább veszélyesnek?</label>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question10" value="1"> Nagy fehér-, tigris- és bikacápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question10" value="2"> Tigris-, nagy fehér- és kékcápa</div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="question10" value="3"> Nagy fehér-, makó- és homoki tigriscápa</div>
+      </div>
 
-                <br>
-                <!-- Nyereményjáték részvétel -->
-                <p class="kviz1">Nyereményjáték részvétel:</p>
-                <p>Ha részt szeretne venni a nyereményjátékon, kérjük adja meg az alábbi adatokat:</p>
-                <label for="name">Név:</label>
-                <input type="text" id="name" name="name"><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
-                <label for="phone">Telefonszám:</label>
-                <input type="tel" id="phone" name="phone"><br>
-                <br>
-                <button class="gomb" type="button" value="Ellenőrzés" onclick="checkAnswers()">Ellenőrzés</button>
-            </form>
-        </div>
-    </body>
+      <hr class="bg-light">
+      <div class="form-group">
+        <label class="kviz1">Nyereményjáték részvétel</label>
+        <p class="kviz2">Ha részt szeretnél venni a nyereményjátékban, kérlek add meg az alábbi adatokat:</p>
+        <input type="text" id="name" name="name" class="form-control mb-2" placeholder="Név">
+        <input type="email" id="email" name="email" class="form-control mb-2" placeholder="Email">
+        <input type="tel" id="phone" name="phone" class="form-control mb-2" placeholder="Telefonszám">
+      </div>
+
+      <button type="button" class="btn btn-info btn-block mt-4 gomb" onclick="checkAnswers()">Ellenőrzés</button>
+      <div id="result" class="mt-4 text-center text-warning font-weight-bold"></div>
+    </form>
+  </div>
+</body>
 </html>
